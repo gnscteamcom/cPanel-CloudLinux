@@ -257,7 +257,7 @@ echo "Desactivando JailShell por default (para que use Bash)..."
 whmapi1 set_tweaksetting key=jaildefaultshell value=0
 
 echo "Desactivando PHP Selector..."
-cloudlinux-selector set --interpreter php --selector-status=disabled --json
+cloudlinux-selector set --interpreter php --selector-status=enable --json
 
 echo "Configurando PAM..."
 sed -i "s/.*pam_lve.so.*/session\trequired\tpam_lve.so\t500\t1\twheel/" /etc/pam.d/sshd
